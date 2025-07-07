@@ -19,7 +19,7 @@ public class CodeViewController {
 
     @GetMapping("/{uuid}")
     public String showCode(@PathVariable("uuid") String uuid, Model model){
-        model.addAttribute("code", codeRepo.findByUuid(uuid));
+        model.addAttribute("code", codeRepo.findByUuid(uuid).getCode());
         return "code";
     }
 }
