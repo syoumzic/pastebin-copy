@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 128px;
+    text-align: center;
+    font-size: 28pt;
+    color: #585C5D;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 78px;
+    gap: 13px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 14pt;
+    color: #1E1E1E;
+}
+
+.form-textarea {
+    width: 354px;
+    height: 43px;
+    border-radius: 12px;
+    padding-left: 12pt;
+    background-color: #D9D9D9;
+    font-size: 10pt;
+    color: #3E4142;
+}
+
+.form-submit {
+    margin-top: 48px;
+    width: 196px;
+    height: 41px;
+    text-align: center;
+    font-size: 14pt;
+    color: #1E1E1E;
+    border-radius: 12px;
+    background-color: #D9D9D9;
+}
+
+.form-submit:hover {
+    color: #ffffff;
+    background-color: #6A8796;
+}
