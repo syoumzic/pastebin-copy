@@ -15,8 +15,8 @@ public class DatasourceConfig {
     @Profile("dev")
     public CommandLineRunner userLoader(UserRepository userRepo, PasswordEncoder passwordEncoder) {
         return args -> {
-            userRepo.save(new User("user1", passwordEncoder.encode("password")));
-            userRepo.save(new User("user2", passwordEncoder.encode("password")));
+            userRepo.save(new User("patya", passwordEncoder.encode("password"), "Petya"));
+            userRepo.save(new User("viktor", passwordEncoder.encode("password"), "Viktor"));
         };
     }
 }
