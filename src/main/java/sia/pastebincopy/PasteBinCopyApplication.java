@@ -1,0 +1,13 @@
+package sia.pastebincopy;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PasteBinCopyApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(PasteBinCopyApplication.class, args);
+    }
+
+}
