@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo">PasteBinCopy</div>
+    </div>
+    <form id="code-form" class="main" method="POST" th:action="@{/design}">
+        <span class="control-panel">
+            <button type="submit" class="control-panel-button">
+                <span class="material-icons">delete</span>
+                <span>Delete</span>
+            </button>
+        </span>
+        <label class="code-editor-area">
+            <textarea
+                    readonly
+                    autocomplete="off"
+                    autofocus
+                    required
+                    spellcheck="false"
+                    name="code"
+                    class="code-editor-text-area"
+                    placeholder="Paste your code here"
+                    th:text="${code}">
+            </textarea>
+        </label>
+    </form>
+    <div class="footer">
+        <a href="https://gitlab.com/Syoumzic" class="footer-link">Gitlab</a>
+        <a href="https://https://github.com/syoumzic" class="footer-link">GitHub</a>
+    </div>
+</div>
+</body>
+</html>
