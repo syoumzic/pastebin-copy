@@ -26,6 +26,11 @@ public class CodeViewController {
     @GetMapping("/{uuid}")
     public String showCode(@AuthenticationPrincipal User auth, @PathVariable("uuid") String uuid, Model model){
         Code code = codeRepo.findByUuid(uuid);
+
+        if(code == null){
+            return "notFound";
+        }
+
         User user = code.getUser();
 
         model.addAttribute("isAuthor", user.equals(auth));
