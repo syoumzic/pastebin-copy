@@ -10,9 +10,9 @@
     <div class="header">
         <div class="logo">PasteBinCopy</div>
     </div>
-    <form id="code-form" class="main" method="POST" th:action="@{/design}">
+    <form id="code-form" class="main" th:method="delete" th:action="@{/code/{uuid}(uuid=${uuid})}">
         <span class="control-panel">
-            <button type="submit" class="control-panel-button">
+            <button th:if="${isAuthor}" type="submit" class="control-panel-button">
                 <span class="material-icons">delete</span>
                 <span>Delete</span>
             </button>

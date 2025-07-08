@@ -2,6 +2,12 @@ spring:
   application:
     name: PasteBinCopy
 
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+
 server:
   port: 8080
 

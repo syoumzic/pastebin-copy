@@ -1,10 +1,12 @@
 package sia.pastebincopy.presentation;
 
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import sia.pastebincopy.db.model.Code;
+import sia.pastebincopy.db.model.User;
 import sia.pastebincopy.db.repository.CodeRepository;
 import sia.pastebincopy.domain.entity.CodeForm;
 
@@ -24,8 +26,8 @@ public class DesignController {
     }
 
     @PostMapping
-    public String setCode(CodeForm codeForm) {
-        Code code = codeForm.toCode();
+    public String setCode(@AuthenticationPrincipal User user, CodeForm codeForm) {
+        Code code = codeForm.toCode(user);
         codeRepo.save(code);
         return "redirect:/code/%s".formatted(code.getUuid());
     }
